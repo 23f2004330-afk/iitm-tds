@@ -1,0 +1,27 @@
+name: CI Example
+
+# Trigger the workflow on push to main branch
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      - name: Install Dependencies
+        run: echo "Installing dependencies..." 
+
+      - name: Run Tests
+        run: echo "Running tests..." 
+
+      - name: 23f2004330@ds.study.iitm.ac.in
+        run: echo "Hello, world!"
